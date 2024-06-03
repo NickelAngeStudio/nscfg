@@ -62,7 +62,3 @@ nscfg has no dependencies and only use stable rust library.
 ## Question?
 See [nscfg wiki](https://github.com/NickelAngeStudio/nscfg/wiki), it contains a **LOT** of information.
 
-&nbsp;
----
-
-*Sponsor me via [GitHub Sponsors](https://github.com/sponsors/NickelAngeStudio) and get your sponsor royalty tier.*
