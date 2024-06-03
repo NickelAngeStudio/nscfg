@@ -1,6 +1,6 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
-use cfg_boost::target_cfg;
+use nscfg::target_cfg;
 
 target_cfg!{
     desktop => {

@@ -1,5 +1,5 @@
 // Test 062 : Modifier @ panic!
-use cfg_boost::{ match_cfg };
+use nscfg::{ match_cfg };
 
 
 fn foo1() -> String {

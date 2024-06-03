@@ -2,7 +2,7 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
 // Test 028 : Documentation with [package.metadata.docs.rs].
-use cfg_boost::{ target_cfg, meta_cfg };
+use nscfg::{ target_cfg, meta_cfg };
 
 
 

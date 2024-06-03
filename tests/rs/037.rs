@@ -1,5 +1,5 @@
 // Test 037 : Legacy syntax match_cfg! not wildcard.
-use cfg_boost::{ match_cfg };
+use nscfg::{ match_cfg };
 
 
 pub fn foo() -> String{

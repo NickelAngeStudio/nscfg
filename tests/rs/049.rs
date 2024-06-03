@@ -1,5 +1,5 @@
 // Test 049 : CfgBoostError::MatchDeactivatedWildArm error.
-use cfg_boost::{ target_cfg, match_cfg, meta_cfg };
+use nscfg::{ target_cfg, match_cfg, meta_cfg };
 
 
 target_cfg! {

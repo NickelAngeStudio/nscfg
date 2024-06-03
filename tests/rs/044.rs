@@ -1,5 +1,5 @@
 // Test 044 : CfgBoostError::ContentSeparatorMissing corrected.
-use cfg_boost::{ target_cfg };
+use nscfg::{ target_cfg };
 
 
 target_cfg! {

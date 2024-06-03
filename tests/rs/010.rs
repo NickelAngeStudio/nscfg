@@ -1,5 +1,5 @@
 // Test 010 : CfgBoostError::InvalidConfigurationPredicate corrected.
-use cfg_boost::{ meta_cfg, target_cfg, match_cfg };
+use nscfg::{ meta_cfg, target_cfg, match_cfg };
 
 target_cfg!{
     x86_64:ar => {

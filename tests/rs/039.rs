@@ -1,5 +1,5 @@
 // Test 039 : Legacy syntax meta_cfg!.
-use cfg_boost::{ meta_cfg };
+use nscfg::{ meta_cfg };
 
 #[meta_cfg(#[cfg(unix)])]
 pub fn foo() -> String {

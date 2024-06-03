@@ -153,18 +153,26 @@ while read line; do
 done < Cargo.toml
 
 # 8. Generate blank project for test
-cargo new $PRJ_TEST_NAME
+#cargo new $PRJ_TEST_NAME
+mkdir $PRJ_TEST_NAME
+mkdir $PRJ_TEST_NAME/src
+
+echo "[package]" >> $PRJ_TEST_NAME/Cargo.toml
+echo "name = \"nscfg_test\"" >> $PRJ_TEST_NAME/Cargo.toml
+echo "version = \"0.1.0\"" >> $PRJ_TEST_NAME/Cargo.toml
+echo "edition = \"2021\"" >> $PRJ_TEST_NAME/Cargo.toml
+echo "[dependencies]" >> $PRJ_TEST_NAME/Cargo.toml
+echo "nscfg = { path = \"nscfg-$package_version\", version = \"$package_version\" }" >> $PRJ_TEST_NAME/Cargo.toml
+echo "" >> $PRJ_TEST_NAME/Cargo.toml
+
+echo "" >> $PRJ_TEST_NAME/src/main.rs
+
 
 # 9. Copy package into project
 cp -r "target/package/nscfg-$package_version" "$PRJ_TEST_NAME/nscfg-$package_version"
 
 
-# 10. Add depedency to new project cargo.toml
-echo "nscfg = { path = \"nscfg-$package_version\", version = \"$package_version\" }" >> $PRJ_TEST_NAME/Cargo.toml
-echo "" >> $PRJ_TEST_NAME/Cargo.toml
-
-
-# 11. Move to test project folder
+# 10. Move to test project folder
 cd $PRJ_TEST_NAME
 
 

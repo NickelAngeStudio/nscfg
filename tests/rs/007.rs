@@ -1,5 +1,5 @@
 // Test 007 : CfgBoostError::AliasNotFound.
-use cfg_boost::{ meta_cfg, target_cfg, match_cfg };
+use nscfg::{ meta_cfg, target_cfg, match_cfg };
 
 target_cfg!{
     desktap => {

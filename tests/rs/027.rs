@@ -1,5 +1,5 @@
-// Test 027 : Documentation without [package.metadata.docs.rs].
-use cfg_boost::{ target_cfg, meta_cfg };
+// Test 027 : Documentation without [package.metadata.docs.rs].`
+use nscfg::{ target_cfg, meta_cfg };
 
 
 

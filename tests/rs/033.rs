@@ -2,7 +2,7 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
 // Test 033 : CfgBoostError::TargetInFunction corrected.
-use cfg_boost::{ match_cfg };
+use nscfg::{ match_cfg };
 
 
 pub fn completed() {

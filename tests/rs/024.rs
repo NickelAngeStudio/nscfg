@@ -1,5 +1,5 @@
 // Test 024 : Predefined aliases.
-use cfg_boost::{ target_cfg, match_cfg, meta_cfg };
+use nscfg::{ target_cfg, match_cfg, meta_cfg };
 
 /**************
  * TARGET_CFG *

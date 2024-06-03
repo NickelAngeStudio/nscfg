@@ -2,7 +2,7 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
 // Test 032 : CfgBoostError::TargetInFunction error.
-use cfg_boost::{ target_cfg };
+use nscfg::{ target_cfg };
 
 
 pub fn completed() {

@@ -1,5 +1,5 @@
 // Test 036 : Legacy syntax target_cfg!.
-use cfg_boost::{ target_cfg };
+use nscfg::{ target_cfg };
 
 
 target_cfg!{

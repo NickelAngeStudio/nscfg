@@ -1,5 +1,5 @@
 // Test 023 : Custom predicates.
-use cfg_boost::{ target_cfg, match_cfg, meta_cfg };
+use nscfg::{ target_cfg, match_cfg, meta_cfg };
 
 /**************
  * TARGET_CFG *

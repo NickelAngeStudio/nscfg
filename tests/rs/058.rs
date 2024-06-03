@@ -1,5 +1,5 @@
 // Test 058 : Modifier - on meta_cfg
-use cfg_boost::{ meta_cfg };
+use nscfg::{ meta_cfg };
 
 
 #[meta_cfg(- #[cfg(all())])]

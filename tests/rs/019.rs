@@ -1,5 +1,5 @@
 // Test 019 : CfgBoostError::WildcardArmMissing.
-use cfg_boost::{ target_cfg, match_cfg };
+use nscfg::{ target_cfg, match_cfg };
 
 target_cfg!{
     

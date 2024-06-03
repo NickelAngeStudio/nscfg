@@ -1,5 +1,5 @@
 // Test 048 : CfgBoostError::MatchModifierMoreThanOneActivate corrected.
-use cfg_boost::{ target_cfg, match_cfg, meta_cfg };
+use nscfg::{ target_cfg, match_cfg, meta_cfg };
 
 
 target_cfg! {

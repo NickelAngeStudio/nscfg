@@ -1,5 +1,5 @@
 // Test 006 : CfgBoostError::InvalidCharacter corrected.
-use cfg_boost::{ meta_cfg };
+use nscfg::{ meta_cfg };
 
 
 #[meta_cfg(linux | windows | macos)]

@@ -2,27 +2,27 @@
 ##################
 # Custom aliases #
 ##################
-cfg_boost-pig = { value = "foo:c9 | foo:really_long_predicate_and_i_mean_really_longgggggggggg | foo:x", force = false }
-cfg_boost-dog = { value = "foo:ar | foo:tf | foo:os | foo:fm | foo:ev | foo:ed | foo:pw | foo:vn | foo:at | foo:pn | foo:ft", force = false }
-cfg_boost-cow = { value = "foo:c3 | foo:c4 | foo:c5 | foo:c6", force = false }
-cfg_boost-parastratiosphecomyia_stratiosphecomyioides = { value = "foo:vn | foo:at | foo:pn | foo:ft", force = false }
-cfg_boost-mosquito = { value = "foo:c1 | foo:c2 | foo:c3 | foo:c4 | foo:c5 | foo:c6 | foo:c7 | foo:c8 | foo:c9 | foo:really_long_predicate_and_i_mean_really_longgggggggggg | foo:x", force = false }
-cfg_boost-frog = { value = "foo:pw | foo:vn | foo:at | foo:c3 | foo:c4 | foo:c5 | foo:c6", force = false }
-cfg_boost-lion = { value = "foo:os | foo:fm | foo:ev | foo:ed | foo:pw", force = false }
-cfg_boost-fish = { value = "foo:c8", force = false }
-cfg_boost-b = { value = "foo:ar | foo:fm", force = false }
+nscfg-pig = { value = "foo:c9 | foo:really_long_predicate_and_i_mean_really_longgggggggggg | foo:x", force = false }
+nscfg-dog = { value = "foo:ar | foo:tf | foo:os | foo:fm | foo:ev | foo:ed | foo:pw | foo:vn | foo:at | foo:pn | foo:ft", force = false }
+nscfg-cow = { value = "foo:c3 | foo:c4 | foo:c5 | foo:c6", force = false }
+nscfg-parastratiosphecomyia_stratiosphecomyioides = { value = "foo:vn | foo:at | foo:pn | foo:ft", force = false }
+nscfg-mosquito = { value = "foo:c1 | foo:c2 | foo:c3 | foo:c4 | foo:c5 | foo:c6 | foo:c7 | foo:c8 | foo:c9 | foo:really_long_predicate_and_i_mean_really_longgggggggggg | foo:x", force = false }
+nscfg-frog = { value = "foo:pw | foo:vn | foo:at | foo:c3 | foo:c4 | foo:c5 | foo:c6", force = false }
+nscfg-lion = { value = "foo:os | foo:fm | foo:ev | foo:ed | foo:pw", force = false }
+nscfg-fish = { value = "foo:c8", force = false }
+nscfg-b = { value = "foo:ar | foo:fm", force = false }
 
 #####################
 # Custom predicates #
 #####################
-cfg_boost_predicate-c1 = { value = "custom1 = \"{}\"", force = true } 
-cfg_boost_predicate-c2 = { value = "custom2 = \"{}\"", force = true }
-cfg_boost_predicate-c3 = { value = "custom3 = \"{}\"", force = true } 
-cfg_boost_predicate-c4 = { value = "custom4 = \"{}\"", force = true } 
-cfg_boost_predicate-c5 = { value = "custom5 = \"{}\"", force = true } 
-cfg_boost_predicate-c6 = { value = "custom6 = \"{}\"", force = true } 
-cfg_boost_predicate-c7 = { value = "custom7 = \"{}\"", force = true } 
-cfg_boost_predicate-c8 = { value = "custom8 = \"{}\"", force = true } 
-cfg_boost_predicate-c9 = { value = "custom9 = \"{}\"", force = true } 
-cfg_boost_predicate-really_long_predicate_and_i_mean_really_longgggggggggg = { value = "really_long_predicate_and_i_mean_really_longgggggggggg = \"{}\"", force = true }
-cfg_boost_predicate-x = { value = "x = \"{}\"", force = true }
+nscfg_predicate-c1 = { value = "custom1 = \"{}\"", force = true } 
+nscfg_predicate-c2 = { value = "custom2 = \"{}\"", force = true }
+nscfg_predicate-c3 = { value = "custom3 = \"{}\"", force = true } 
+nscfg_predicate-c4 = { value = "custom4 = \"{}\"", force = true } 
+nscfg_predicate-c5 = { value = "custom5 = \"{}\"", force = true } 
+nscfg_predicate-c6 = { value = "custom6 = \"{}\"", force = true } 
+nscfg_predicate-c7 = { value = "custom7 = \"{}\"", force = true } 
+nscfg_predicate-c8 = { value = "custom8 = \"{}\"", force = true } 
+nscfg_predicate-c9 = { value = "custom9 = \"{}\"", force = true } 
+nscfg_predicate-really_long_predicate_and_i_mean_really_longgggggggggg = { value = "really_long_predicate_and_i_mean_really_longgggggggggg = \"{}\"", force = true }
+nscfg_predicate-x = { value = "x = \"{}\"", force = true }

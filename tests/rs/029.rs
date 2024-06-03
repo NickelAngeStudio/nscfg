@@ -2,7 +2,7 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
 // Test 029 : CfgBoostError::WildcardArmOnTarget error.
-use cfg_boost::{ target_cfg };
+use nscfg::{ target_cfg };
 
 
 target_cfg!{ 

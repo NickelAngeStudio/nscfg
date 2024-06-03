@@ -1,5 +1,5 @@
 // Test 040 : CfgBoostError::MixedSyntaxError error.
-use cfg_boost::{ target_cfg };
+use nscfg::{ target_cfg };
 
 
 target_cfg! {

@@ -1,5 +1,5 @@
 // Test 057 : Modifier - on match_cfg!
-use cfg_boost::{ match_cfg };
+use nscfg::{ match_cfg };
 
 
 fn foo1() -> String {

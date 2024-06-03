@@ -1,5 +1,5 @@
 // Test 017 : CfgBoostError::ContentSeparatorError.
-use cfg_boost::{ target_cfg, match_cfg };
+use nscfg::{ target_cfg, match_cfg };
 
 target_cfg!{
     
