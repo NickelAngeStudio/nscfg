@@ -2,12 +2,12 @@
 name = "nscfg"
 version = "1.0.0"
 edition = "2021"
-authors = ["NickelAnge.Studio <rust@nickelange.studio>"]
-description = "Revamped syntax and macros to easily manage all #[cfg] parameters in one package. Compatible with stable toolchain and no dependencies. See README / Homepage for more details."
+authors = ["NickelAnge.Studio <mathieu.grenier@nickelange.studio>"]
+description = "Nifty Simple CFG provides a revamped syntax and macros to easily manage all #[cfg] parameters in one package. Compatible with stable toolchain and no dependencies. See README / Homepage for more details."
 keywords = ["cfg", "match", "target", "boost", "meta"]
 categories = ["configuration", "development-tools"]
-repository = "https://github.com/NickelAngeStudio/cfg_boost"
-homepage = "https://github.com/NickelAngeStudio/cfg_boost/wiki"
+repository = "https://github.com/NickelAngeStudio/nscfg"
+homepage = "https://github.com/NickelAngeStudio/nscfg/wiki"
 license = "MIT"
 readme = "README.md"
 

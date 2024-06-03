@@ -1,6 +1,6 @@
 ####################################################
 # FILE
-# cfg_boost_stress.sh
+# nscfg_stress.sh
 #
 # DESCRIPTION
 # Stress test target_cfg!, match_cfg! and meta_cfg! by generating complex and random 'main.rs'
@@ -9,7 +9,7 @@
 # n/a
 #
 # USAGE
-# $ bash cfg_boost_tests.sh via -s argument
+# $ bash nscfg_tests.sh via -s argument
 #
 # NOTE
 # 
@@ -23,9 +23,9 @@
 # 2023-04-03
 ####################################################
 
-# Validate that call comes from cfg_boost_tests.sh
+# Validate that call comes from nscfg_tests.sh
 if [[ "${PWD##*/}" != "$1" ]]; then
-    echo "ERROR : Stress test must be executed by cfg_boost_tests.sh"
+    echo "ERROR : Stress test must be executed by nscfg_tests.sh"
     exit 1
 fi
 
@@ -75,7 +75,7 @@ PREDICATE_LIMIT=20
 generate_main_header() {
 	# Overwrite main.rs
 	echo "#![cfg_attr(docsrs, feature(doc_cfg))]" > 'src/main.rs'
-	echo "use cfg_boost::{target_cfg, match_cfg, meta_cfg};" >> 'src/main.rs'
+	echo "use nscfg::{target_cfg, match_cfg, meta_cfg};" >> 'src/main.rs'
 }
 
 # Generate arm attributes from predicates or legacy
@@ -265,7 +265,7 @@ cp -r "../tests/rs/alias.toml" ".cargo/config.toml"
 
 echo -en "\033[1;34m"
 echo "####################"
-echo "# cfg_boost STRESS #"
+echo "# nscfg STRESS #"
 echo "####################"
 echo -en "\033[0m"
 

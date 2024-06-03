@@ -1,0 +1,6 @@
+/tests/tests.rs
+/nscfg_test
+/target
+/target_nscfg
+/Cargo.lock
+/.vscode

@@ -1,18 +1,18 @@
 ####################################################
 # FILE
-# cfg_boost_performance.sh
+# nscfg_performance.sh
 #
 # DESCRIPTION
-# Calculate the cost on performance from using cfg_boost proc macros.
+# Calculate the cost on performance from using nscfg proc macros.
 #
 # PARAMETERS
 # n/a
 #
 # USAGE
-# $ bash cfg_boost_tests.sh via -s argument
+# $ bash nscfg_tests.sh via -s argument
 #
 # NOTE
-# Must be called by cfg_boost_tests.sh
+# Must be called by nscfg_tests.sh
 #
 # REFERENCES
 #
@@ -23,9 +23,9 @@
 # 2023-04-03
 ####################################################
 
-# Validate that call comes from cfg_boost_tests.sh
+# Validate that call comes from nscfg_tests.sh
 if [[ "${PWD##*/}" != "$1" ]]; then
-    echo "ERROR : Stress test must be executed by cfg_boost_tests.sh"
+    echo "ERROR : Stress test must be executed by nscfg_tests.sh"
     exit 1
 fi
 

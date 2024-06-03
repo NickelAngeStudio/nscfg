@@ -1,9 +1,9 @@
 ####################################################
 # FILE
-# cfg_boost_tests.sh
+# nscfg_tests.sh
 #
 # DESCRIPTION
-# Generate project `cfg_boost_test` to test cfg_boost proc macros.
+# Generate project `nscfg_test` to test nscfg proc macros.
 #
 # PARAMETERS
 # `-i` for integration test
@@ -13,7 +13,7 @@
 # `N` for test loop count
 #
 # USAGE
-# $ bash cfg_boost_tests.sh [test_type] (verbose) [loop_count]
+# $ bash nscfg_tests.sh [test_type] (verbose) [loop_count]
 #
 # NOTE
 #
@@ -28,7 +28,7 @@
 ####################################################
 
 # Project test name
-PRJ_TEST_NAME="cfg_boost_test"
+PRJ_TEST_NAME="nscfg_test"
 
 #############
 # FUNCTIONS #
@@ -40,8 +40,8 @@ remove_quotes() {
 
 # Help showed when syntax incorrect
 show_help() {
-	echo "cfg_boost_tests Usage"
-	echo "bash cfg_boost_tests.sh [test_type] (options) [loop_count]"
+	echo "nscfg_tests Usage"
+	echo "bash nscfg_tests.sh [test_type] (options) [loop_count]"
 	echo ""
 	echo "Test type"
 	echo "-i : Integration"
@@ -138,10 +138,10 @@ fi
 # 4. Clear screen
 printf "\033c"
 
-# 5. Go to cfg_boost root
+# 5. Go to nscfg root
 cd ..
 
-# 6. Generate target_cfg package, allowing dirty
+# 6. Generate nscfg_cfg package, allowing dirty
 cargo package --allow-dirty
 
 # 7. Get package version from Cargo.toml
@@ -156,11 +156,11 @@ done < Cargo.toml
 cargo new $PRJ_TEST_NAME
 
 # 9. Copy package into project
-cp -r "target/package/cfg_boost-$package_version" "$PRJ_TEST_NAME/cfg_boost-$package_version"
+cp -r "target/package/nscfg-$package_version" "$PRJ_TEST_NAME/nscfg-$package_version"
 
 
 # 10. Add depedency to new project cargo.toml
-echo "cfg_boost = { path = \"cfg_boost-$package_version\", version = \"$package_version\" }" >> $PRJ_TEST_NAME/Cargo.toml
+echo "nscfg = { path = \"nscfg-$package_version\", version = \"$package_version\" }" >> $PRJ_TEST_NAME/Cargo.toml
 echo "" >> $PRJ_TEST_NAME/Cargo.toml
 
 
@@ -172,11 +172,11 @@ cd $PRJ_TEST_NAME
 # Run test and get exit code #
 ##############################
 if [[ "$TEST_TYPE" == "PERFORMANCE" ]]; then
-	bash ../tests/cfg_boost_performance.sh $PRJ_TEST_NAME $VERBOSE $NO_CLEAN $LOOP_COUNT
+	bash ../tests/nscfg_performance.sh $PRJ_TEST_NAME $VERBOSE $NO_CLEAN $LOOP_COUNT
 elif [[ "$TEST_TYPE" == "STRESS" ]]; then
-	bash ../tests/cfg_boost_stress.sh $PRJ_TEST_NAME $VERBOSE $NO_CLEAN $LOOP_COUNT
+	bash ../tests/nscfg_stress.sh $PRJ_TEST_NAME $VERBOSE $NO_CLEAN $LOOP_COUNT
 else
-	bash ../tests/cfg_boost_integration.sh $PRJ_TEST_NAME $VERBOSE $NO_CLEAN
+	bash ../tests/nscfg_integration.sh $PRJ_TEST_NAME $VERBOSE $NO_CLEAN
 fi
 
 # Get running status result
@@ -191,7 +191,7 @@ fi
 ############
 # CLEAN UP #
 ############
-# 1. Go back to cfg_boost root
+# 1. Go back to nscfg root
 cd ..
 
 # 2. Delete PRJ_TEST_NAME folder.

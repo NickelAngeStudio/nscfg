@@ -1,16 +1,43 @@
 #![doc(html_logo_url = "https://avatars.githubusercontent.com/u/67743099?v=4")]
 #![doc(html_favicon_url = "https://avatars.githubusercontent.com/u/67743099?v=4")]
+
+/* 
+Copyright (c) 2024  NickelAnge.Studio 
+Email               mathieu.grenier@nickelange.studio
+Git                 https://github.com/NickelAngeStudio/nswnd
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
 //! <div style="float:right;width:200px;height:80px;"><iframe src="https://github.com/sponsors/NickelAngeStudio/button" title="Sponsor NickelAngeStudio" height="32" width="200" style=" border: 0; border-radius: 6px;"></iframe><a href="https://github.com/NickelAngeStudio/nscfg/wiki"><button style="width:200px;height:32px;background-color: #1f883d;border: none;color: white;padding: 0px;text-align: center;border-radius: 6px;text-decoration: none;display: inline-block;font-size: 16px;margin: 0px;">Wiki</button></a></div>
 //! 
 //! Nifty Simple CFG provides a [revamped syntax and macros](https://github.com/NickelAngeStudio/nscfg/wiki/Syntax) 
 //! to easily manage all `#[cfg]` [conditional compilation](https://doc.rust-lang.org/reference/conditional-compilation.html)
 //! predicates and parameters in one package.
 //! 
+//! `nscfg` was previously named [`cfg_boost`](https://crates.io/crates/cfg_boost)
+//! 
 //! See [features](https://github.com/NickelAngeStudio/nscfg/wiki/Features) to get the full list of features like aliases, attributes, automatic dependency tag documentation and more.
 //!
 //! ## Example
-//! **Transform this :**nscfg
-//! ```ignore
+//! **Transform this :**
+//! ```
 //! #[cfg(any(doc, any(target_os = "linux", target_os = "macos", target_os = "windows")))]
 //! #[cfg_attr(docsrs, doc(cfg(any(target_os = "linux", target_os = "windows", target_os = "macos"))))]
 //! pub mod desktop_mod;
@@ -37,7 +64,7 @@
 //! ```
 //! 
 //! **Into this :**
-//! ```ignore
+//! ```
 //! target_cfg!{
 //!     desktop => {
 //!         pub mod desktop_mod;
@@ -91,7 +118,7 @@ pub(crate) enum NscfgMacroSource {
 /// **target_cfg! has no runtime cost.**
 /// 
 /// ## Syntax
-/// ```ignore
+/// ```
 /// target_cfg!{
 ///     !? alias* (| &)? !? value:pred* => {},+
 ///     #[cfg(legacy_syntax)] => {},+    // target_cfg! also support legacy syntax
@@ -109,7 +136,7 @@ pub(crate) enum NscfgMacroSource {
 /// 
 /// ## Example
 /// **This**
-/// ```ignore
+/// ```
 /// /// This function is not for windows
 /// #[cfg(any(doc, not(windows)))]
 /// pub fn not_for_windows() {
@@ -132,7 +159,7 @@ pub(crate) enum NscfgMacroSource {
 /// compile_error!("Mobile not supported");
 /// ```
 /// **becomes**
-/// ```ignore
+/// ```
 /// target_cfg!{
 ///     #[cfg(not(windows))] => {     // Legacy syntax example.
 ///         /// This function is not for windows
@@ -201,7 +228,7 @@ pub fn target_cfg(item: TokenStream) -> TokenStream {
 /// **match_cfg! has no runtime cost.**
 /// 
 /// ## Syntax
-/// ```ignore
+/// ```
 /// match_cfg!{
 ///     !? alias* (| &)? !? value:pred* => {},+
 ///     #[cfg(legacy_syntax)] => {},+    // match_cfg! also support legacy syntax
@@ -212,7 +239,7 @@ pub fn target_cfg(item: TokenStream) -> TokenStream {
 /// 
 /// ## Example
 /// **This**
-/// ```ignore
+/// ```
 /// pub fn foo(){
 ///     let a = {
 ///         #[cfg(linux)]
@@ -244,7 +271,7 @@ pub fn target_cfg(item: TokenStream) -> TokenStream {
 /// }
 /// ```
 /// **becomes**
-/// ```ignore
+/// ```
 /// pub fn foo(){
 ///     let a = match_cfg!{
 ///         linux => 10,
@@ -292,7 +319,7 @@ pub fn match_cfg(item: TokenStream) -> TokenStream {
 /// **meta_cfg has no runtime cost.**
 /// 
 /// ## Syntax
-/// ```ignore
+/// ```
 /// #[meta_cfg(!? alias* (| &)? !? value:pred*)]
 /// item
 /// 
@@ -311,12 +338,12 @@ pub fn match_cfg(item: TokenStream) -> TokenStream {
 /// 
 /// ## Example
 /// **This**
-/// ```ignore
+/// ```
 /// #[cfg(any(doc, any(windows, unix, target_os="macos")))]
 /// pub fn foo() {}
 /// ```
 /// **becomes**
-/// ```ignore
+/// ```
 /// #[meta_cfg(windows | unix | macos)]
 /// pub fn foo() {}
 /// ```
